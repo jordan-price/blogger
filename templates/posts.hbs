@@ -1,8 +1,10 @@
-<div class="container">
 	<h1>Dracula's Blog</h1>
 	<ul>
-	<li><a hreft="#">I love blood!</a></li>
-	<li><a hreft="#">The Count</a></li>
-	<li><a hreft="#">Thievery</a></li>
+		{{#each}}
+		<li>{{#link-to 'post' this.id}}{{title}}{{/link-to}}</li>
+		{{/each}}
 	<ul>
+
+
+<p><a href="#" {{action 'sortByTitle'}}>Sort by title</a></p>
 </div>
